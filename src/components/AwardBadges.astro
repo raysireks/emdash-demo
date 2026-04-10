@@ -1,0 +1,38 @@
+---
+---
+<div class="award-badges">
+  <img src="/assets/SuperLawyers-1-min.png" alt="SuperLawyers" />
+  <img src="/assets/Best-of-417-min.png" alt="Best of 417" />
+  <img src="/assets/The-Power-30-Missouri-Lawyers-Weekly-1-min.png" alt="Power 30" />
+  <img src="/assets/AV-Preminent_Whit.png" alt="AV Preeminent" />
+</div>
+
+<style>
+  .award-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .award-badges img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s, filter 0.3s;
+  }
+
+  .award-badges img:hover {
+    opacity: 1;
+    filter: none;
+  }
+
+  @media (max-width: 768px) {
+    .award-badges { gap: 1.5rem; }
+    .award-badges img { height: 60px; }
+  }
+</style>

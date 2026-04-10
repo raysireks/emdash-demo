@@ -1,0 +1,121 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="/assets/Carver-associates-logo.png" alt="Carver & Associates" height="50" class="footer-logo" />
+        <p class="footer-desc">Award-winning criminal defense attorney in Springfield, MO with over 45 years of trial experience.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>2974 E Battlefield Rd<br />Springfield, MO 65804</p>
+        <p><a href="tel:4173501172">(417) 350-1172</a></p>
+        <p><a href="mailto:tom@gocarverllc.com">tom@gocarverllc.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Practice Areas</h3>
+        <ul class="footer-links">
+          <li><a href="/practice-areas/federal-criminal">Federal Criminal</a></li>
+          <li><a href="/practice-areas/sex-crimes">Sex Crimes</a></li>
+          <li><a href="/practice-areas/dwi">DWI</a></li>
+          <li><a href="/practice-areas/white-collar-crime">White Collar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; {currentYear} Carver & Associates. All rights reserved.</p>
+      <p class="disclaimer">Use of the website does not constitute legal advice or form an attorney/client relationship.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-footer-bg);
+    color: #fff;
+    padding-top: 4rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-col h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-desc {
+    color: rgba(255,255,255,0.7);
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-col p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: var(--color-accent);
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    background: #111;
+    padding: 2rem 0;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .disclaimer {
+    max-width: 600px;
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .footer-bottom-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .disclaimer {
+      text-align: center;
+    }
+  }
+</style>

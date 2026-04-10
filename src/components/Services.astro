@@ -1,0 +1,53 @@
+---
+const services = [
+  { title: "Federal Crimes", text: "Thomas Carver has successfully defended hundreds of clients in federal courts across the country." },
+  { title: "White Collar Crimes", text: "From embezzlement to fraud, we have the experience to handle complex financial criminal cases." },
+  { title: "Felonies", text: "We represent clients facing all classes of Missouri felonies, protecting their future and reputation." },
+  { title: "Tax Crimes", text: "Experienced defense for individuals and businesses accused of tax evasion and other IRS-related crimes." },
+  { title: "DWI", text: "Vigorous defense for driving while intoxicated charges, aiming to save your license and freedom." },
+  { title: "Misdemeanors", text: "Every case matters. We provide high-quality defense for all misdemeanor charges in Springfield." },
+];
+---
+
+<section class="services section">
+  <div class="container">
+    <div class="services-header text-center">
+      <h2>VIGOROUS, EFFECTIVE CRIMINAL DEFENSE</h2>
+      <p>We are here to fight for you from your first court appearance to the final resolution.</p>
+    </div>
+
+    <div class="services-list">
+      {services.map((service) => (
+        <div class="service-item">
+          <h3>{service.title}</h3>
+          <p>{service.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services { background: #fff; padding: 6rem 0; }
+  .text-center { text-align: center; }
+  .services-header h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+  .services-header p { font-size: 1.2rem; margin-bottom: 4rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+  }
+
+  .service-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+  }
+
+  .service-item h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--color-primary); }
+  .service-item p { color: var(--color-body-text); }
+
+  @media (max-width: 768px) {
+    .services-list { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+const practiceAreas = [
+  { title: "Tax Attorney", icon: "/assets/calculator-icon.png", url: "/practice-areas/tax-crimes" },
+  { title: "Federal Criminal", icon: "/assets/courthouse-icon.png", url: "/practice-areas/federal-criminal" },
+  { title: "White Collar", icon: "/assets/Business-Law-Icon.png", url: "/practice-areas/white-collar-crime" },
+  { title: "DWI / Misdemeanors", icon: "/assets/handcuffs-icon.png", url: "/practice-areas/dwi" },
+  { title: "Felonies", icon: "/assets/misdemeanor-icon-min.png", url: "/practice-areas/felonies" },
+  { title: "Expungement", icon: "/assets/Personal-Injury-Icon.png", url: "/practice-areas/expungement" },
+  { title: "Drugs", icon: "/assets/domestic-violence-icon-min.png", url: "/practice-areas/drug-conspiracy" },
+  { title: "Sex Crimes", icon: "/assets/vehicular-homicide-icon-min.png", url: "/practice-areas/sex-crimes" },
+];
+---
+
+<section class="practice-areas section">
+  <div class="container">
+    <div class="practice-header">
+      <h2>Criminal Defense Practice Areas</h2>
+    </div>
+
+    <div class="practice-grid">
+      {practiceAreas.map((area) => (
+        <a href={area.url} class="practice-card">
+          <img src={area.icon} alt={area.title} />
+          <h3>{area.title}</h3>
+          <span class="learn-more">LEARN MORE</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .practice-areas { background: #f4f4f4; padding: 6rem 0; }
+  .practice-header { text-align: center; margin-bottom: 4rem; }
+  .practice-header h2 { font-size: 2.5rem; }
+
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .practice-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-heading);
+    transition: all 0.3s;
+    border: 1px solid #eee;
+  }
+  .practice-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+  }
+
+  .practice-card img {
+    height: 60px;
+    margin-bottom: 1.5rem;
+    filter: grayscale(1);
+    transition: filter 0.3s;
+  }
+  .practice-card:hover img {
+    filter: none;
+  }
+
+  .practice-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .learn-more {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.2rem;
+  }
+</style>
