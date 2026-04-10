@@ -1,0 +1,50 @@
+---
+const services = [
+  { title: "Federal Crimes", text: "We represent clients charged with offenses like petty theft, simple assault, trespassing, or driving on a suspended license. We aim to help you avoid jail time and keep your record clean." },
+  { title: "White Collar Crimes", text: "We defend clients accused of fraud, embezzlement, tax evasion, and other financial crimes. We carefully review documents, challenge evidence, and fight against federal or state prosecution." },
+  { title: "Felonies", text: "We handle serious charges such as drug trafficking, burglary, assault, and homicide. We develop tailored defense strategies based on the evidence and specific court procedures." },
+  { title: "Tax Crimes", text: "We defend clients accused of tax fraud, filing failure, or other IRS-related charges. We work to resolve disputes while minimizing penalties." },
+  { title: "DWI (Driving While Intoxicated)", text: "We defend clients facing charges of driving while intoxicated (DWI). Our defense strategies include challenging breathalyzer results, field sobriety tests, and the legality of traffic stops." },
+  { title: "Misdemeanors", text: "We represent clients charged with offenses like petty theft, simple assault, trespassing, or driving on a suspended license. We aim to help you avoid jail time and keep your record clean." },
+  { title: "Expungement", text: "We help clients clear eligible criminal records under Missouri law, allowing them to move forward without the burden of a public criminal history." },
+];
+---
+
+<section class="section-services-outer" style="background-color: #ffffff; padding: 60px 0; position: relative; z-index: 1;">
+  <div class="services-blue-box" style="background-color: #1e3c5a; color: #ffffff; max-width: 1140px; margin: 0 auto; padding: 80px 60px; border-radius: 0;">
+    <div class="header-v4" style="text-align: center; margin-bottom: 60px;">
+      <h2 style="color: #bed05c; font-family: sans-serif; font-size: 2.2rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;">VIGOROUS, EFFECTIVE CRIMINAL DEFENSE</h2>
+      <p style="color: #ffffff; opacity: 0.9; margin-top: 15px; font-size: 1.1rem;">We are here to fight for you from your first court appearance to the final resolution.</p>
+    </div>
+
+    <div class="list-v4" style="display: flex; flex-direction: column; gap: 45px; max-width: 900px; margin: 0 auto;">
+      {services.map((service) => (
+        <div class="item-v4">
+          <h3 style="color: #bed05c; font-family: sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">{service.title}</h3>
+          <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1.05rem;">{service.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-services-outer {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .services-blue-box {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 1200px) {
+    .services-blue-box { margin: 0 20px !important; }
+  }
+
+  @media (max-width: 768px) {
+    .services-blue-box { padding: 50px 30px !important; }
+    .header-v4 h2 { font-size: 1.7rem !important; }
+  }
+</style>

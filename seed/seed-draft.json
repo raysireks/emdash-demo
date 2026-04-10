@@ -1,0 +1,294 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Carver & Associates",
+    "description": "Award-winning criminal defense attorneys in Springfield, MO",
+    "author": "Carver & Associates"
+  },
+  "settings": {
+    "title": "Carver & Associates",
+    "tagline": "Award-Winning Criminal Defense Attorneys – Springfield, MO"
+  },
+  "collections": [
+    {
+      "slug": "pages",
+      "label": "Pages",
+      "labelSingular": "Page",
+      "supports": [
+        "drafts",
+        "revisions",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "meta_description",
+          "label": "Meta Description",
+          "type": "text"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "slug": "practice_areas",
+      "label": "Practice Areas",
+      "labelSingular": "Practice Area",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "summary",
+          "label": "Summary",
+          "type": "text",
+          "searchable": true
+        },
+        {
+          "slug": "meta_description",
+          "label": "Meta Description",
+          "type": "text"
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured Image",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "slug": "attorneys",
+      "label": "Attorneys",
+      "labelSingular": "Attorney",
+      "supports": [
+        "drafts",
+        "revisions"
+      ],
+      "fields": [
+        {
+          "slug": "display_name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "title",
+          "label": "Title / Role",
+          "type": "string"
+        },
+        {
+          "slug": "photo",
+          "label": "Photo",
+          "type": "image"
+        },
+        {
+          "slug": "bio",
+          "label": "Biography",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "bar_admissions",
+          "label": "Bar Admissions",
+          "type": "text"
+        },
+        {
+          "slug": "awards",
+          "label": "Awards & Recognition",
+          "type": "text"
+        },
+        {
+          "slug": "phone",
+          "label": "Direct Phone",
+          "type": "string"
+        },
+        {
+          "slug": "email",
+          "label": "Email",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "practice_type",
+      "label": "Practice Types",
+      "labelSingular": "Practice Type",
+      "hierarchical": false,
+      "collections": [
+        "practice_areas"
+      ],
+      "terms": [
+        {
+          "slug": "criminal-defense",
+          "label": "Criminal Defense"
+        },
+        {
+          "slug": "federal-crimes",
+          "label": "Federal Crimes"
+        },
+        {
+          "slug": "white-collar",
+          "label": "White Collar"
+        },
+        {
+          "slug": "drug-crimes",
+          "label": "Drug Crimes"
+        },
+        {
+          "slug": "traffic",
+          "label": "Traffic"
+        },
+        {
+          "slug": "personal-injury",
+          "label": "Personal Injury"
+        },
+        {
+          "slug": "fraud",
+          "label": "Fraud"
+        }
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary Navigation",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "Practice Areas",
+          "url": "/practice-areas"
+        },
+        {
+          "type": "custom",
+          "label": "About",
+          "url": "/thomas-carver"
+        },
+        {
+          "type": "custom",
+          "label": "Contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Footer Navigation",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "Fraud Lawyers",
+          "url": "/practice-areas/fraud-lawyers"
+        },
+        {
+          "type": "custom",
+          "label": "Drug Conspiracy",
+          "url": "/practice-areas/drug-conspiracy"
+        },
+        {
+          "type": "custom",
+          "label": "Federal Criminal",
+          "url": "/practice-areas/federal-criminal-lawyer"
+        },
+        {
+          "type": "custom",
+          "label": "White Collar Crime",
+          "url": "/practice-areas/white-collar-crime-lawyer"
+        },
+        {
+          "type": "custom",
+          "label": "Traffic Tickets",
+          "url": "/practice-areas/traffic-ticket-lawyer-springfield-mo"
+        },
+        {
+          "type": "custom",
+          "label": "Personal Injury",
+          "url": "/practice-areas/personal-injury-lawyer-springfield-mo"
+        },
+        {
+          "type": "custom",
+          "label": "Contact",
+          "url": "/contact"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "pages": [
+      {
+        "id": "contact",
+        "slug": "contact",
+        "status": "published",
+        "data": {
+          "title": "Contact - Free Consultation - Carver & Associates",
+          "meta_description": "Contact the law firm of Carver &amp; Associates. Phone: (417) 350-1172 or (866) 353-7921. Located at 901 E St Louis St Suite 1600, Springfield, MO 65806.",
+          "content": []
+        }
+      },
+      {
+        "id": "home",
+        "slug": "home",
+        "status": "published",
+        "data": {
+          "title": "Award-Winning Criminal Defense Attorney Springfield MO - Carver & Associates Law Firm",
+          "meta_description": "Elite Criminal Defense Attorney Springfield MO. 3X Lawyer of the Year in Springfield, Missouri. 40+ Years Experience &gt; Free Consultation.",
+          "content": []
+        }
+      }
+    ],
+    "practice_areas": [],
+    "attorneys": [
+      {
+        "id": "thomas-carver",
+        "slug": "thomas-carver",
+        "status": "published",
+        "data": {
+          "title": "About Us - Carver & Associates",
+          "meta_description": "Thomas Carver, Attorney in Springfield MO is a former President of the Missouri Association of Criminal Defense Lawyers with 43+ years of trial experience.",
+          "display_name": "Thomas Carver",
+          "bio": []
+        }
+      }
+    ]
+  }
+}

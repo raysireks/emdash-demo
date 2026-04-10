@@ -22,5 +22,12 @@ export default defineConfig({
 			},
 		}),
 	],
+	vite: {
+		server: {
+			watch: {
+				usePolling: true,
+			},
+		},
+	},
 	devToolbar: { enabled: false },
 });

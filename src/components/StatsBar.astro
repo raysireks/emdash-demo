@@ -1,0 +1,167 @@
+---
+---
+<section class="section-vast-experience">
+  <div class="container vast-container">
+    <div class="vast-left">
+      <div class="vast-image-wrap">
+        <img src="/assets/carver-law-homepage-about-section-min.jpg" alt="Thomas Carver with Award Plaques" />
+      </div>
+      <div class="vast-cta">
+        <a href="tel:4173501172" class="btn btn-vast-cta">+ FREE CONSULTATION</a>
+      </div>
+    </div>
+    
+    <div class="vast-content">
+      <p class="vast-eyebrow">VAST EXPERIENCE, UNMATCHED RESULTS</p>
+      
+      <div class="experience-list">
+        <div class="experience-item">
+          <span class="vast-plus-icon">+</span>
+          <div class="vast-item-text">
+            <h3>50+ YEARS OF EXCELLENCE</h3>
+            <p>Few can match Thomas Carver's track record of legal excellence.</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span class="vast-plus-icon">+</span>
+          <div class="vast-item-text">
+            <h3>1,000+ SATISFIED CLIENTS</h3>
+            <p>Consistently delivering the best possible outcomes for his clients in courts statewide.</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span class="vast-plus-icon">+</span>
+          <div class="vast-item-text">
+            <h3>300+ FEDERAL CASES</h3>
+            <p>One of the most experienced federal litigators in Springfield and the State of Missouri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-vast-experience {
+    background-color: #1a2c38 !important; /* Force primary dark teal */
+    padding: 5rem 0 8rem; /* Reduced top padding to create overhang space */
+    color: #ffffff !important;
+    position: relative;
+  }
+
+  .vast-container {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 6rem;
+    align-items: flex-start;
+  }
+
+  .vast-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: -8rem; /* Pull image up past the section padding for overhang */
+  }
+
+  .vast-image-wrap {
+    position: relative;
+    z-index: 5;
+  }
+
+  .vast-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+  }
+
+  .btn-vast-cta {
+    width: 100%;
+    max-width: 380px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    background: #bed05c !important; /* Lime green */
+    color: #1a2c38 !important;
+    border-radius: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-vast-cta:hover {
+    background: #a9ba4a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .vast-content {
+    padding-top: 2rem;
+  }
+
+  .vast-eyebrow {
+    color: #bed05c !important; /* Lime green */
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    font-family: var(--font-body);
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .vast-plus-icon {
+    font-size: 3.5rem;
+    line-height: 0.8;
+    color: #ffffff !important;
+    font-weight: 300;
+    margin-top: -5px;
+  }
+
+  .vast-item-text h3 {
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    color: #ffffff !important;
+  }
+
+  .vast-item-text p {
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400;
+  }
+
+  @media (max-width: 1024px) {
+    .vast-container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    .vast-left {
+      align-items: center;
+    }
+    .vast-eyebrow {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+</style>
