@@ -15,20 +15,12 @@ The most minimal EmDash template. A single index page with [EmDash](https://gith
 - **Storage:** Local filesystem
 - **Framework:** Astro with `@astrojs/node`
 
-## Getting Started
-
-```bash
-npm install
-npx emdash dev
-```
-
-Open http://localhost:4321 for the site and http://localhost:4321/_emdash/admin for the CMS.
-
 ## Demo Site Setup & Login
 
-If you reset the database (`data.db`), EmDash's Dev Bypass will automatically recreate the `dev@emdash.local` user, but it contains a bug where it fails to mark the setup as complete. To skip the setup wizard:
-
-1. Stop the dev server (`Ctrl+C`).
+1. Install dependencies
+   ```bash
+   yarn -i
+   ```
 2. Run the seed to initialize the schema:
    ```bash
    npx emdash seed seed/seed.json
