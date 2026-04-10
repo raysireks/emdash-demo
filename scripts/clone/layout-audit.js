@@ -23,13 +23,31 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_DIR = join(__dirname, "output");
 
 const PAGES = [
+  // Core pages
   { slug: "home", url: "https://gocarverllc.com/" },
   { slug: "thomas-carver", url: "https://gocarverllc.com/thomas-carver/" },
   { slug: "contact", url: "https://gocarverllc.com/contact/" },
-  { slug: "fraud-lawyers", url: "https://gocarverllc.com/fraud-lawyers/" },
+
+  // Practice Areas — index + all sub-pages discovered in nav
+  { slug: "practice-areas-index", url: "https://gocarverllc.com/criminal-lawyer-springfield-mo/" },
   { slug: "federal-criminal-lawyer", url: "https://gocarverllc.com/federal-criminal-lawyer/" },
+  { slug: "sex-crime-lawyer", url: "https://gocarverllc.com/sex-crime-lawyer/" },
+  { slug: "child-pornography-lawyer", url: "https://gocarverllc.com/child-pornography-lawyer/" },
   { slug: "white-collar-crime", url: "https://gocarverllc.com/white-collar-crime-lawyer/" },
+  { slug: "fraud-lawyers", url: "https://gocarverllc.com/fraud-lawyers/" },
+  { slug: "drug-conspiracy", url: "https://gocarverllc.com/drug-conspiracy/" },
+  { slug: "dwi-lawyer", url: "https://gocarverllc.com/dwi-lawyer-springfield-mo/" },
+  { slug: "traffic-tickets", url: "https://gocarverllc.com/springfield-traffic-tickets/" },
   { slug: "personal-injury", url: "https://gocarverllc.com/personal-injury-lawyer-springfield-mo/" },
+
+  // Additional practice areas linked from homepage CTA buttons
+  { slug: "tax-attorney", url: "https://gocarverllc.com/tax-attorney-springfield-mo/" },
+  { slug: "felonies", url: "https://gocarverllc.com/felonies-in-missouri/" },
+  { slug: "misdemeanors", url: "https://gocarverllc.com/missouri-misdemeanor/" },
+  { slug: "expungement", url: "https://gocarverllc.com/missouri-expungement/" },
+
+  // Blog
+  { slug: "blog-index", url: "https://gocarverllc.com/blog/" },
 ];
 
 function sleep(ms) {
