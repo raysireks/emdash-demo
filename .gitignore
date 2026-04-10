@@ -3,6 +3,13 @@ dist
 .astro
 uploads
 data.db
+data.db-shm
+data.db-wal
 
 # Clone/scraping utilities — never commit scraped data
 scripts/clone/output/
+
+# Ignore general scripts except the specific ones we want tracked
+/scripts/*
+!/scripts/setup-demo-admin.cjs
+!/scripts/clone/

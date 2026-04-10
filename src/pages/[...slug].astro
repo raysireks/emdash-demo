@@ -1,0 +1,91 @@
+---
+import { getEmDashEntry } from "emdash";
+import { PortableText } from "emdash/ui";
+import Base from "../layouts/Base.astro";
+
+const { slug } = Astro.params;
+
+// Fetch the entry from "pages" collection
+const entryResult = await getEmDashEntry("pages", slug);
+const entry = entryResult?.entry;
+const cacheHint = entryResult?.cacheHint;
+
+if (!entry || entry.status === "draft") {
+  return new Response("Page not found", { status: 404 });
+}
+
+// EmDash boilerplate
+Astro.locals.emdash = Astro.locals.emdash || {};
+Astro.locals.emdash.entry = entry;
+Astro.cache?.set(cacheHint);
+---
+
+<Base entry={entry}>
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>{entry.data.title}</h1>
+      <p class="subtitle">Legal Expertise</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="cms-content">
+        <PortableText value={entry.data.content} />
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .text-center { text-align: center; }
+  
+  .page-header { 
+    background: #f8f9fa; 
+    padding: 5rem 0; 
+    border-bottom: 2px solid var(--color-accent);
+    margin-bottom: 2rem;
+  }
+  
+  .page-header h1 { 
+    font-family: var(--font-heading); 
+    font-size: clamp(1.8rem, 4vw, 2.5rem); 
+    color: var(--color-primary); 
+    text-transform: uppercase; 
+    letter-spacing: 0.1em; 
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .content-section { 
+    padding-bottom: 5rem; 
+  }
+
+  .cms-content { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .cms-content :global(h2) {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .cms-content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+</style>

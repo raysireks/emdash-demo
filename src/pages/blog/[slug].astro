@@ -1,0 +1,62 @@
+---
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: "hello-world" } },
+  ];
+}
+
+const { slug } = Astro.params;
+const title = slug.replace(/-/g, " ").toUpperCase();
+---
+
+<Base title={`${title} | Blog | Carver & Associates`} description={`Reading ${title} on the Carver & Associates legal blog.`}>
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>{title}</h1>
+      <p class="subtitle">Legal Insights</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="placeholder-content">
+        <h2>Blog Post: {title}</h2>
+        <p>This is a hello-world stub for a blog post.</p>
+        <p>In the final site, this content will be served dynamically from the EmDash CMS.</p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .text-center { text-align: center; }
+  
+  .page-header {
+    background: #f8f9fa;
+    padding: 4rem 0;
+    border-bottom: 2px solid #BECA5C;
+  }
+  
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-family: var(--font-heading);
+    letter-spacing: 0.2em;
+    color: #BECA5C;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .content-section { padding: 4rem 0; }
+  .placeholder-content { max-width: 800px; margin: 0 auto; line-height: 1.8; }
+</style>

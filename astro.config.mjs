@@ -17,6 +17,9 @@ export default defineConfig({
 				directory: "./uploads",
 				baseUrl: "/_emdash/api/media/file",
 			}),
+			admin: {
+				dev: { bypass: true },
+			},
 		}),
 	],
 	devToolbar: { enabled: false },
