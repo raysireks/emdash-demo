@@ -33,7 +33,7 @@ const pageCtx = createPublicPageContext({
     {pageCtx.description && <meta name="description" content={pageCtx.description} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Ubuntu:wght@400;500&family=Benne&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <EmDashHead page={pageCtx} />
   </head>
   <body>
@@ -55,16 +55,18 @@ const pageCtx = createPublicPageContext({
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --color-primary: #023750;
-    --color-accent:  #BECA5C;
-    --color-body-text: #666666;
-    --color-heading: #333333;
+    --color-primary: #1a2c38;
+    --color-accent:  #C5A059;
+    --color-lime:    #bed05c;
+    --color-lime-dark: #a9ba4a;
+    --color-body-text: #333333;
+    --color-heading: #1a2c38;
     --color-white:   #FFFFFF;
     --color-footer-bg: #1C1C1C;
-    --font-heading:  "Josefin Sans", sans-serif;
-    --font-body:     "Ubuntu", sans-serif;
-    --font-serif:    "Benne", serif;
-    --max-width:     1200px;
+    --font-heading:  "Playfair Display", serif;
+    --font-body:     "Montserrat", sans-serif;
+    --font-serif:    "Playfair Display", serif;
+    --max-width:     1140px;
   }
 
   body {
@@ -72,36 +74,40 @@ const pageCtx = createPublicPageContext({
     color: var(--color-body-text);
     background: var(--color-white);
     line-height: 1.6;
+    font-size: 16px;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--color-heading);
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 700;
   }
 
   /* ── Buttons ──────────────────────────────────── */
   .btn {
     display: inline-block;
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
     cursor: pointer;
     border: none;
-    transition: background 0.2s, color 0.2s;
-    border-radius: 0;
+    transition: all 0.3s ease;
+    border-radius: 21px;
   }
   .btn-accent {
     background: var(--color-accent);
-    color: #333333;
+    color: #002147;
   }
   .btn-accent:hover {
-    background: #a8b540;
+    background: #b08f4f;
+    color: #002147;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   }
   .btn-outline {
     background: transparent;
@@ -110,7 +116,7 @@ const pageCtx = createPublicPageContext({
   }
   .btn-outline:hover {
     background: var(--color-accent);
-    color: #333333;
+    color: #fff;
   }
 
   .container {

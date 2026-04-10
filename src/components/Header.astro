@@ -6,7 +6,7 @@ const navItems = menu?.items ?? [];
 ---
 
 <header class="site-header">
-  <div class="header-inner container">
+  <div class="header-inner">
     <a href="/" class="logo">
       <img src="/assets/Carver-associates-logo.png" alt="Carver & Associates" height="60" />
     </a>
@@ -25,79 +25,138 @@ const navItems = menu?.items ?? [];
 
     <div class="header-cta">
       <a href="tel:4173501172" class="header-phone">(417) 350-1172</a>
-      <a href="/contact" class="btn btn-accent">FREE CONSULTATION</a>
+      <a href="/contact" class="btn btn-accent btn-header">FREE CONSULTATION</a>
     </div>
   </div>
 </header>
 
 <style>
   .site-header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(2, 55, 80, 0.5);
-    backdrop-filter: blur(10px);
-    transition: background 0.3s;
+    background: rgba(30, 55, 80, 0.6);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  /* Scrolled state (handled via JS or sibling selector if possible, but let's stick to simple CSS for now) */
+  /* Scrolled state */
   :global(.scrolled) .site-header {
-    background: #023750;
+    background: rgba(30, 55, 80, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2); /* Gold accent border still provides feedback */
   }
 
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: auto;
+    padding: 27px 20px 10px;
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+
+  :global(.scrolled) .header-inner {
+    padding: 15px 20px;
   }
 
   .logo img {
     display: block;
-    width: auto;
+    width: 120px;
+    height: 33px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover img {
+    transform: scale(1.02);
+  }
+
+  .site-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 3rem;
   }
 
   .site-nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .site-nav a {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 0.9rem;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 0.5rem 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
+    transition: all 0.3s ease;
   }
 
   .site-nav a:hover,
   .site-nav a.active {
     color: var(--color-accent);
-    border-bottom-color: var(--color-accent);
   }
 
   .header-cta {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    padding-bottom: 16px;
   }
 
   .header-phone {
-    font-family: var(--font-heading);
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+
+  .header-phone:hover {
+    color: var(--color-accent);
+  }
+
+  .btn-header {
+    background: var(--color-lime);
+    color: var(--color-primary);
+    width: 226px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border-radius: 21px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0; /* Clear padding to respect fixed height/width */
+  }
+
+  .btn-header:hover {
+    background: var(--color-lime-dark);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(190, 208, 92, 0.3);
+  }
+
+  @media (max-width: 1100px) {
+    .site-nav ul { gap: 1rem; }
+    .header-cta { gap: 1rem; }
   }
 
   @media (max-width: 1024px) {
     .site-nav { display: none; }
+    .header-phone { display: none; }
   }
 </style>
 
