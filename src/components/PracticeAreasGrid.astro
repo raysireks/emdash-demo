@@ -1,28 +1,32 @@
 ---
 const practiceAreas = [
-  { title: "Tax Attorney", icon: "/assets/calculator-icon.png", url: "/practice-areas/tax-crimes" },
-  { title: "Federal Criminal", icon: "/assets/courthouse-icon.png", url: "/practice-areas/federal-criminal" },
+  { title: "Tax", icon: "/assets/calculator-icon.png", url: "/practice-areas/tax-crimes" },
+  { title: "Federal", icon: "/assets/courthouse-icon.png", url: "/practice-areas/federal-criminal" },
   { title: "White Collar", icon: "/assets/Business-Law-Icon.png", url: "/practice-areas/white-collar-crime" },
-  { title: "DWI / Misdemeanors", icon: "/assets/handcuffs-icon.png", url: "/practice-areas/dwi" },
-  { title: "Felonies", icon: "/assets/misdemeanor-icon-min.png", url: "/practice-areas/felonies" },
-  { title: "Expungement", icon: "/assets/Personal-Injury-Icon.png", url: "/practice-areas/expungement" },
-  { title: "Drugs", icon: "/assets/domestic-violence-icon-min.png", url: "/practice-areas/drug-conspiracy" },
-  { title: "Sex Crimes", icon: "/assets/vehicular-homicide-icon-min.png", url: "/practice-areas/sex-crimes" },
+  { title: "DWI", icon: "/assets/vehicular-homicide-icon-min.png", url: "/practice-areas/dwi" },
+  { title: "Misdemeanors", icon: "/assets/domestic-violence-icon-min.png", url: "/practice-areas/misdemeanors" },
+  { title: "Felonies", icon: "/assets/handcuffs-icon.png", url: "/practice-areas/felonies" },
+  { title: "Expungement", icon: "/assets/misdemeanor-icon-min.png", url: "/practice-areas/expungement" },
+  { title: "Drugs", icon: "/assets/Personal-Injury-Icon.png", url: "/practice-areas/drug-conspiracy" },
 ];
 ---
 
-<section class="practice-areas section">
-  <div class="container">
-    <div class="practice-header">
-      <h2>Criminal Defense Practice Areas</h2>
+<section class="section-practice-v2">
+  <div class="container-v2">
+    <div class="header-v2">
+      <h2 class="title-v2">CRIMINAL DEFENSE PRACTICE AREAS</h2>
     </div>
 
-    <div class="practice-grid">
+    <div class="grid-v2">
       {practiceAreas.map((area) => (
-        <a href={area.url} class="practice-card">
-          <img src={area.icon} alt={area.title} />
-          <h3>{area.title}</h3>
-          <span class="learn-more">LEARN MORE</span>
+        <a href={area.url} class="item-v2">
+          <div class="card-v2">
+            <h3 class="card-title-v2">{area.title}</h3>
+            <div class="icon-v2">
+              <img src={area.icon} alt={area.title} />
+            </div>
+            <div class="button-v2">LEARN MORE</div>
+          </div>
         </a>
       ))}
     </div>
@@ -30,56 +34,113 @@ const practiceAreas = [
 </section>
 
 <style>
-  .practice-areas { background: #f4f4f4; padding: 6rem 0; }
-  .practice-header { text-align: center; margin-bottom: 4rem; }
-  .practice-header h2 { font-size: 2.5rem; }
-
-  .practice-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+  .section-practice-v2 {
+    background: #ffffff !important;
+    padding: 80px 20px !important;
+    display: block !important;
+    width: 100% !important;
   }
 
-  .practice-card {
-    background: #fff;
-    padding: 3rem 2rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--color-heading);
-    transition: all 0.3s;
-    border: 1px solid #eee;
-  }
-  .practice-card:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
+  .container-v2 {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
   }
 
-  .practice-card img {
-    height: 60px;
-    margin-bottom: 1.5rem;
-    filter: grayscale(1);
-    transition: filter 0.3s;
-  }
-  .practice-card:hover img {
-    filter: none;
+  .header-v2 {
+    text-align: center !important;
+    margin-bottom: 60px !important;
   }
 
-  .practice-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    min-height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .title-v2 {
+    font-family: sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #1a2c38 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin: 0 !important;
   }
 
-  .learn-more {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    letter-spacing: 0.1em;
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 0.2rem;
+  .grid-v2 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0px !important;
+    border: 1px solid #1a2c38 !important;
+    width: 100% !important;
+    background: #1a2c38 !important; /* Thick lines come from bg with gap */
+    gap: 1px !important;
+    position: relative !important;
+  }
+
+  .item-v2 {
+    text-decoration: none !important;
+    background: #ffffff !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .card-v2 {
+    padding: 50px 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    flex-grow: 1 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .item-v2:hover {
+    z-index: 10 !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .card-title-v2 {
+    font-family: sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #1a2c38 !important;
+    margin: 0 0 20px 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+  }
+
+  .icon-v2 {
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 20px 0 !important;
+  }
+
+  .icon-v2 img {
+    max-height: 100% !important;
+    width: auto !important;
+    display: block !important;
+    filter: brightness(0.2) !important;
+  }
+
+  .button-v2 {
+    background: #bed05c !important;
+    color: #1a2c38 !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    padding: 8px 16px !important;
+    border-radius: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 20px !important;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-v2 { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+
+  @media (max-width: 600px) {
+    .grid-v2 { grid-template-columns: 1fr !important; }
   }
 </style>
