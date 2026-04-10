@@ -1,0 +1,17 @@
+{
+  "name": "gocarver-clone-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright-based utilities for crawling gocarverllc.com",
+  "scripts": {
+    "crawl": "node crawl.js",
+    "extract-images": "node extract-images.js",
+    "extract-content": "node extract-content.js",
+    "generate-seed": "node generate-seed.js",
+    "all": "node crawl.js && node extract-images.js && node extract-content.js && node generate-seed.js"
+  },
+  "dependencies": {
+    "playwright": "^1.43.0"
+  }
+}

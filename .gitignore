@@ -3,3 +3,6 @@ dist
 .astro
 uploads
 data.db
+
+# Clone/scraping utilities — never commit scraped data
+scripts/clone/output/
