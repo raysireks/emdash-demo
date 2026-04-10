@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Carver & Associates" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Carver & Associates" [ref=e5]
+      - link "FREE CONSULTATION" [ref=e7] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e13]:
+        - heading "When your freedom is on the line, you need the BEST Criminal Defense." [level=1] [ref=e14]:
+          - text: When your
+          - text: freedom is on the
+          - text: line, you need the
+          - strong [ref=e15]:
+            - text: BEST Criminal
+            - text: Defense.
+        - link "+ FREE CONSULTATION" [ref=e17] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: GET AN AWARD-WINNING CRIMINAL DEFENSE
+        - heading "Criminal Defense Attorney Springfield MO" [level=2] [ref=e21]
+        - generic [ref=e23]:
+          - img "SuperLawyers" [ref=e24]
+          - img "Best of 417" [ref=e25]
+          - img "Power 30" [ref=e26]
+          - img "AV Preeminent" [ref=e27]
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: WHEN YOU WANT THE BEST
+        - heading "Criminal Lawyer Springfield MO" [level=2] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: +
+            - heading "COURTROOM FOCUSED" [level=3] [ref=e37]:
+              - text: COURTROOM
+              - text: FOCUSED
+          - paragraph [ref=e38]: That means our work is centered on trial practice. As trial lawyers, our attorneys’ work is heavily weighted toward complex criminal matters in Missouri state courts and federal courts. Our collaborative approach means you get the power of three instead of only one attorney.
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: +
+            - heading "UNRIVALED EXPERIENCE" [level=3] [ref=e42]:
+              - text: UNRIVALED
+              - text: EXPERIENCE
+          - paragraph [ref=e43]: Thomas Carver has litigated thousands of cases in the state and federal courts of Missouri. He has a reputation for success and gives 110% to every single client. Take advantage of this attorney’s experience whose sole focus is to employ it on your behalf.
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: +
+            - heading "RECOGNIZED EXCELLENCE" [level=3] [ref=e47]:
+              - text: RECOGNIZED
+              - text: EXCELLENCE
+          - paragraph [ref=e48]: Thomas D. Carver highly regarded by legal peers for his trial expertise, exhaustive preparation, and integrity. This law firm was recognized as a 2017 U.S. News – Best Lawyers Best Law Firm and consistently receives individual awards for excellence in the courtroom.
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - img "Thomas Carver with Award Plaques" [ref=e53]
+        - link "+ FREE CONSULTATION" [ref=e55] [cursor=pointer]:
+          - /url: tel:4173501172
+      - generic [ref=e56]:
+        - paragraph [ref=e57]: VAST EXPERIENCE, UNMATCHED RESULTS
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: +
+            - generic [ref=e61]:
+              - heading "50+ YEARS OF EXCELLENCE" [level=3] [ref=e62]
+              - paragraph [ref=e63]: Few can match Thomas Carver's track record of legal excellence.
+          - generic [ref=e64]:
+            - generic [ref=e65]: +
+            - generic [ref=e66]:
+              - heading "1,000+ SATISFIED CLIENTS" [level=3] [ref=e67]
+              - paragraph [ref=e68]: Consistently delivering the best possible outcomes for his clients in courts statewide.
+          - generic [ref=e69]:
+            - generic [ref=e70]: +
+            - generic [ref=e71]:
+              - heading "300+ FEDERAL CASES" [level=3] [ref=e72]
+              - paragraph [ref=e73]: One of the most experienced federal litigators in Springfield and the State of Missouri.
+    - generic [ref=e75]:
+      - heading "CRIMINAL DEFENSE PRACTICE AREAS" [level=2] [ref=e77]
+      - generic [ref=e78]:
+        - link "Tax Tax LEARN MORE" [ref=e79] [cursor=pointer]:
+          - /url: /practice-areas/tax-crimes
+          - generic [ref=e80]:
+            - heading "Tax" [level=3] [ref=e81]
+            - img "Tax" [ref=e83]
+            - generic [ref=e84]: LEARN MORE
+        - link "Federal Federal LEARN MORE" [ref=e85] [cursor=pointer]:
+          - /url: /practice-areas/federal-criminal
+          - generic [ref=e86]:
+            - heading "Federal" [level=3] [ref=e87]
+            - img "Federal" [ref=e89]
+            - generic [ref=e90]: LEARN MORE
+        - link "White Collar White Collar LEARN MORE" [ref=e91] [cursor=pointer]:
+          - /url: /practice-areas/white-collar-crime
+          - generic [ref=e92]:
+            - heading "White Collar" [level=3] [ref=e93]
+            - img "White Collar" [ref=e95]
+            - generic [ref=e96]: LEARN MORE
+        - link "DWI DWI LEARN MORE" [ref=e97] [cursor=pointer]:
+          - /url: /practice-areas/dwi
+          - generic [ref=e98]:
+            - heading "DWI" [level=3] [ref=e99]
+            - img "DWI" [ref=e101]
+            - generic [ref=e102]: LEARN MORE
+        - link "Misdemeanors Misdemeanors LEARN MORE" [ref=e103] [cursor=pointer]:
+          - /url: /practice-areas/misdemeanors
+          - generic [ref=e104]:
+            - heading "Misdemeanors" [level=3] [ref=e105]
+            - img "Misdemeanors" [ref=e107]
+            - generic [ref=e108]: LEARN MORE
+        - link "Felonies Felonies LEARN MORE" [ref=e109] [cursor=pointer]:
+          - /url: /practice-areas/felonies
+          - generic [ref=e110]:
+            - heading "Felonies" [level=3] [ref=e111]
+            - img "Felonies" [ref=e113]
+            - generic [ref=e114]: LEARN MORE
+        - link "Expungement Expungement LEARN MORE" [ref=e115] [cursor=pointer]:
+          - /url: /practice-areas/expungement
+          - generic [ref=e116]:
+            - heading "Expungement" [level=3] [ref=e117]
+            - img "Expungement" [ref=e119]
+            - generic [ref=e120]: LEARN MORE
+        - link "Drugs Drugs LEARN MORE" [ref=e121] [cursor=pointer]:
+          - /url: /practice-areas/drug-conspiracy
+          - generic [ref=e122]:
+            - heading "Drugs" [level=3] [ref=e123]
+            - img "Drugs" [ref=e125]
+            - generic [ref=e126]: LEARN MORE
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - heading "VIGOROUS, EFFECTIVE CRIMINAL DEFENSE" [level=2] [ref=e130]
+        - paragraph [ref=e131]: We are here to fight for you from your first court appearance to the final resolution.
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - heading "Federal Crimes" [level=3] [ref=e134]
+          - paragraph [ref=e135]: We represent clients charged with offenses like petty theft, simple assault, trespassing, or driving on a suspended license. We aim to help you avoid jail time and keep your record clean.
+        - generic [ref=e136]:
+          - heading "White Collar Crimes" [level=3] [ref=e137]
+          - paragraph [ref=e138]: We defend clients accused of fraud, embezzlement, tax evasion, and other financial crimes. We carefully review documents, challenge evidence, and fight against federal or state prosecution.
+        - generic [ref=e139]:
+          - heading "Felonies" [level=3] [ref=e140]
+          - paragraph [ref=e141]: We handle serious charges such as drug trafficking, burglary, assault, and homicide. We develop tailored defense strategies based on the evidence and specific court procedures.
+        - generic [ref=e142]:
+          - heading "Tax Crimes" [level=3] [ref=e143]
+          - paragraph [ref=e144]: We defend clients accused of tax fraud, filing failure, or other IRS-related charges. We work to resolve disputes while minimizing penalties.
+        - generic [ref=e145]:
+          - heading "DWI (Driving While Intoxicated)" [level=3] [ref=e146]
+          - paragraph [ref=e147]: We defend clients facing charges of driving while intoxicated (DWI). Our defense strategies include challenging breathalyzer results, field sobriety tests, and the legality of traffic stops.
+        - generic [ref=e148]:
+          - heading "Misdemeanors" [level=3] [ref=e149]
+          - paragraph [ref=e150]: We represent clients charged with offenses like petty theft, simple assault, trespassing, or driving on a suspended license. We aim to help you avoid jail time and keep your record clean.
+        - generic [ref=e151]:
+          - heading "Expungement" [level=3] [ref=e152]
+          - paragraph [ref=e153]: We help clients clear eligible criminal records under Missouri law, allowing them to move forward without the burden of a public criminal history.
+    - generic [ref=e155]:
+      - paragraph [ref=e156]: LET US FIGHT FOR YOU
+      - heading "Criminal Law Firm in Springfield MO" [level=2] [ref=e157]
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - img [ref=e161]
+          - generic [ref=e164]:
+            - heading "VIGOROUSLY FIGHT THE PROSECUTION'S CASE" [level=3] [ref=e165]
+            - paragraph [ref=e166]: We confront the prosecution head-on, challenging every part of the case against you.
+        - generic [ref=e167]:
+          - img [ref=e169]
+          - generic [ref=e172]:
+            - heading "DEFEND YOUR CONSTITUTIONAL RIGHTS" [level=3] [ref=e173]
+            - paragraph [ref=e174]: "\"Innocent until proven guilty\" isn't a slogan — it's our standard. Let us fight for you."
+        - generic [ref=e175]:
+          - img [ref=e177]
+          - generic [ref=e180]:
+            - heading "SECURE THE MOST OPTIMAL OUTCOME FOR YOU" [level=3] [ref=e181]
+            - paragraph [ref=e182]: Dismissal, reduced charges, or avoiding jail time; every decision is focused on protecting you.
+    - generic [ref=e184]:
+      - heading "CONTACT US" [level=2] [ref=e185]
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - generic [ref=e188]:
+            - generic [ref=e189]: Name *
+            - textbox [ref=e190]
+          - generic [ref=e191]:
+            - generic [ref=e192]: Email *
+            - textbox [ref=e193]
+        - generic [ref=e194]:
+          - generic [ref=e195]: Phone *
+          - textbox [ref=e196]
+        - generic [ref=e197]:
+          - generic [ref=e198]: What happened? *
+          - textbox [ref=e199]
+        - button "SUBMIT" [ref=e201] [cursor=pointer]
+  - contentinfo [ref=e202]:
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - img "Carver & Associates" [ref=e207]
+          - link [ref=e209] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e210]
+        - list [ref=e213]:
+          - listitem [ref=e214]:
+            - link "Home" [ref=e215] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e216]:
+            - link "Practice Areas" [ref=e217] [cursor=pointer]:
+              - /url: /practice-areas
+          - listitem [ref=e218]:
+            - link "About Us" [ref=e219] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e220]:
+            - link "Blog" [ref=e221] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e222]:
+            - link "Contact" [ref=e223] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e224]:
+            - link "Privacy Policy" [ref=e225] [cursor=pointer]:
+              - /url: /privacy
+        - generic [ref=e226]:
+          - heading "CONTACT US" [level=4] [ref=e227]
+          - generic [ref=e228]:
+            - generic [ref=e229]: "PHONE: (417) 695-4638"
+            - generic [ref=e230]: "FAX: (417) 350-1182"
+            - generic [ref=e231]:
+              - text: 2974 E Battlefield Rd,
+              - text: Springfield, MO 65804
+        - generic [ref=e233]:
+          - iframe [ref=e234]:
+            - link "Maps (opens in new tab)" [ref=f18e4] [cursor=pointer]:
+              - /url: about:invalid#zClosurez
+              - text: Maps
+              - img [ref=f18e6]
+          - link "Open In Maps ↗" [ref=e235] [cursor=pointer]:
+            - /url: https://maps.google.com/maps?q=2974%20E%20Battlefield%20Rd,%20Springfield,%20MO%2065804
+      - generic [ref=e236]:
+        - separator [ref=e237]
+        - generic [ref=e238]:
+          - generic [ref=e239]: Copyright © 2021- 2026 Carver & Associates
+          - link "CONSTELLATION Marketing for Law Firms" [ref=e241] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e243]
+            - generic [ref=e245]: CONSTELLATION
+            - generic [ref=e246]: Marketing for Law Firms
+        - generic [ref=e247]: Use of the website does not constitute legal advice or form an attorney/client relationship.

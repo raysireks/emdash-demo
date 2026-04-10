@@ -1,4 +1,5 @@
 ---
+const { entry } = Astro.props;
 import AwardBadges from './AwardBadges.astro';
 ---
 
@@ -7,7 +8,7 @@ import AwardBadges from './AwardBadges.astro';
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-text-wrap">
-        <h1 class="hero-title">
+        <h1 class="hero-title" {...entry?.edit.title}>
           When your<br/>
           freedom is on the<br/>
           line, you need the<br/>

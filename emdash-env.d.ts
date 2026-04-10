@@ -5,6 +5,25 @@
 
 import type { ContentBylineCredit, PortableTextBlock } from "emdash";
 
+export interface Attorney {
+  id: string;
+  slug: string | null;
+  status: string;
+  display_name: string;
+  title?: string;
+  meta_description?: string;
+  photo?: { id: string; src?: string; alt?: string; width?: number; height?: number };
+  bio?: PortableTextBlock[];
+  bar_admissions?: string;
+  awards?: string;
+  phone?: string;
+  email?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
 export interface Page {
   id: string;
   slug: string | null;
@@ -18,8 +37,27 @@ export interface Page {
   bylines?: ContentBylineCredit[];
 }
 
+export interface PracticeArea {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  summary?: string;
+  meta_description?: string;
+  featured_image?: { id: string; src?: string; alt?: string; width?: number; height?: number };
+  content?: PortableTextBlock[];
+  navigation_label?: string;
+  featured?: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
 declare module "emdash" {
   interface EmDashCollections {
+    attorneys: Attorney;
     pages: Page;
+    practice_areas: PracticeArea;
   }
 }

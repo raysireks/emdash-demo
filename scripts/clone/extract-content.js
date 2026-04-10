@@ -74,7 +74,29 @@ function extractParagraphs(html) {
     .replace(/<nav[\s\S]*?<\/nav>/gi, "")
     .replace(/<header[\s\S]*?<\/header>/gi, "")
     .replace(/<footer[\s\S]*?<\/footer>/gi, "");
-  return extractByTag(body, "p").filter((p) => p.length > 30);
+
+  const paras = new Set();
+  
+  // 1. Standard paragraphs
+  for (const p of extractByTag(body, "p")) {
+    if (p.length > 25) paras.add(p);
+  }
+
+  // 2. Divi Text Modules (.et_pb_text_inner)
+  const diviTextRegex = /<div[^>]+class=["'][^"']*et_pb_text_inner[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi;
+  for (const [, inner] of body.matchAll(diviTextRegex)) {
+    const text = stripTags(inner).trim();
+    if (text.length > 25) paras.add(text);
+  }
+
+  // 3. Divi Blurbs (.et_pb_blurb_content)
+  const diviBlurbRegex = /<div[^>]+class=["'][^"']*et_pb_blurb_content[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi;
+  for (const [, inner] of body.matchAll(diviBlurbRegex)) {
+    const text = stripTags(inner).trim();
+    if (text.length > 25) paras.add(text);
+  }
+
+  return [...paras];
 }
 
 function extractLinks(html) {

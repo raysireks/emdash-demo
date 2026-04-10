@@ -1,8 +1,11 @@
+---
+const { entry } = Astro.props;
+---
 <section class="features section">
   <div class="container">
     <div class="features-header">
       <p class="eyebrow">WHEN YOU WANT THE BEST</p>
-      <h2 class="section-title">Criminal Lawyer Springfield MO</h2>
+      <h2 class="section-title" {...entry?.edit.title}>Criminal Lawyer Springfield MO</h2>
     </div>
 
     <div class="features-grid">
