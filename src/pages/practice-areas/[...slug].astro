@@ -1,19 +1,19 @@
 ---
 import { getEmDashEntry } from "emdash";
 import { PortableText } from "emdash/ui";
-import Base from "../layouts/Base.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 const { slug } = Astro.params;
 
-// Fetch the entry from "pages" collection
-const entryResult = await getEmDashEntry("pages", slug);
+// Fetch the entry from "practice_areas" collection
+const entryResult = await getEmDashEntry("practice_areas", slug);
 const entry = entryResult?.entry;
 const cacheHint = entryResult?.cacheHint;
 
 if (!entry || entry.status === "draft") {
-  return new Response("Page not found", { status: 404 });
+  return new Response("Practice Area not found", { status: 404 });
 }
 
 // EmDash boilerplate
@@ -22,7 +22,7 @@ Astro.locals.emdash.entry = entry;
 Astro.cache?.set(cacheHint);
 ---
 
-<Base entry={entry}>
+<Base entry={entry} collection="practice_areas">
   <Header slot="header" />
 
   <!-- Premium Interior Hero -->
@@ -33,7 +33,7 @@ Astro.cache?.set(cacheHint);
       </h1>
       <div style="width: 60px; height: 4px; background: #bed05c; margin: 20px auto;"></div>
       <p style="font-family: sans-serif; font-size: 0.9rem; font-weight: 700; color: #bed05c; text-transform: uppercase; letter-spacing: 0.2em;">
-        LEGAL EXPERTISE & DEFENSE
+        PRACTICE AREA SPECIALIST
       </p>
     </div>
   </section>
@@ -43,6 +43,10 @@ Astro.cache?.set(cacheHint);
     <div class="container-v3" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
       <div class="cms-content-v3" style="font-family: sans-serif; line-height: 1.8; color: #333333; font-size: 1.1rem;">
         <PortableText value={entry.data.content} />
+      </div>
+      
+      <div style="margin-top: 60px; text-align: center;">
+        <a href="/contact" class="btn btn-accent" style="background: #bed05c; color: #1a2c38; padding: 15px 40px; border-radius: 25px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em;">Request a Consultation</a>
       </div>
     </div>
   </section>
@@ -54,10 +58,10 @@ Astro.cache?.set(cacheHint);
   .cms-content-v3 h2 {
     font-family: sans-serif;
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #1a2c38;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
   }
   .cms-content-v3 p {

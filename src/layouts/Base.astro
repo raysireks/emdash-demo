@@ -11,16 +11,17 @@ interface Props {
   title?: string;
   description?: string;
   entry?: any;
+  collection?: string;
 }
 
-const { title, description, entry } = Astro.props;
+const { title, description, entry, collection = "pages" } = Astro.props;
 
 const pageCtx = createPublicPageContext({
   Astro,
   kind: entry ? "content" : "custom",
   title: title || entry?.data?.title || settings?.data?.title,
   description: description || entry?.data?.meta_description || settings?.data?.tagline,
-  content: entry ? { collection: "pages", id: entry.data.id, slug: entry.id } : undefined,
+  content: entry ? { collection, id: entry.data.id || entry.id, slug: entry.id } : undefined,
 });
 ---
 

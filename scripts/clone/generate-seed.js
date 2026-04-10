@@ -141,10 +141,11 @@ async function main() {
         slug: "attorneys",
         label: "Attorneys",
         labelSingular: "Attorney",
-        supports: ["drafts", "revisions"],
+        supports: ["drafts", "revisions", "seo"],
         fields: [
           { slug: "display_name", label: "Name", type: "string", required: true, searchable: true },
           { slug: "title", label: "Title / Role", type: "string" },
+          { slug: "meta_description", label: "Meta Description", type: "text" },
           { slug: "photo", label: "Photo", type: "image" },
           { slug: "bio", label: "Biography", type: "portableText", searchable: true },
           { slug: "bar_admissions", label: "Bar Admissions", type: "text" },
@@ -205,11 +206,10 @@ async function main() {
     },
   };
 
-  const outPath = join(SEED_DIR, "seed-draft.json");
+  const outPath = join(SEED_DIR, "seed.json");
   await writeFile(outPath, JSON.stringify(seed, null, 2), "utf-8");
 
-  console.log(`\n✅ Draft seed written to seed/seed-draft.json`);
-  console.log(`   Review and rename to seed/seed.json when ready.`);
+  console.log(`\n✅ Seed written to seed/seed.json`);
   if (allPhones.size > 0) {
     console.log(`\n📞 Phone numbers found on site: ${[...allPhones].join(", ")}`);
   }
