@@ -16,6 +16,7 @@
       "label": "Pages",
       "labelSingular": "Page",
       "supports": ["drafts", "revisions", "seo"],
+      "urlPattern": "/{slug}",
       "fields": [
         { "slug": "title", "label": "Title", "type": "string", "required": true, "searchable": true },
         { "slug": "meta_description", "label": "Meta Description", "type": "text" },
@@ -59,6 +60,22 @@
               "_type": "block",
               "style": "normal",
               "children": [{ "_type": "span", "text": "Welcome to Carver & Associates." }]
+            }
+          ]
+        }
+      },
+      {
+        "id": "thomas-carver",
+        "slug": "thomas-carver",
+        "status": "published",
+        "data": {
+          "title": "Thomas Carver - Trial Lawyer",
+          "meta_description": "Thomas Carver is a five-time Lawyer of the Year in Springfield, MO.",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [{ "_type": "span", "text": "Thomas Carver has represented thousands of clients in Missouri." }]
             }
           ]
         }

@@ -1,8 +1,18 @@
 ---
+import { getEmDashEntry } from "emdash";
 import Base from "../layouts/Base.astro";
+
+const entryResult = await getEmDashEntry("pages", "home");
+const entry = entryResult?.entry;
+const cacheHint = entryResult?.cacheHint;
+
+if (entry) {
+  Astro.locals.emdash = { ...Astro.locals.emdash, entry };
+  Astro.cache?.set(cacheHint);
+}
 ---
 
-<Base title="Award-Winning Criminal Defense Attorney Springfield MO" description="Elite Criminal Defense Attorney Springfield MO. 3X Lawyer of the Year. 40+ Years Experience. Free Consultation.">
+<Base entry={entry}>
 
   <!-- Hero -->
   <section class="hero">

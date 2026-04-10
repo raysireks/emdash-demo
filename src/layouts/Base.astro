@@ -1,18 +1,27 @@
 ---
 import { getMenu, getSiteSettings } from "emdash";
 import { EmDashHead, EmDashBodyStart, EmDashBodyEnd } from "emdash/ui";
+import { createPublicPageContext } from "emdash/page";
 
 const settings = await getSiteSettings();
 const menu = await getMenu("primary");
-const navItems = menu?.entries ?? [];
+const navItems = menu?.items ?? [];
 
 interface Props {
   title?: string;
   description?: string;
+  entry?: any;
 }
 
-const { title, description } = Astro.props;
-const pageTitle = title ? `${title} | ${settings.data?.title ?? "Carver & Associates"}` : (settings.data?.title ?? "Carver & Associates");
+const { title, description, entry } = Astro.props;
+
+const pageCtx = createPublicPageContext({
+  Astro,
+  kind: entry ? "content" : "custom",
+  title: title || entry?.data?.title || settings?.data?.title,
+  description: description || entry?.data?.meta_description || settings?.data?.tagline,
+  content: entry ? { collection: "pages", id: entry.data.id, slug: entry.id } : undefined,
+});
 ---
 
 <!doctype html>
@@ -20,15 +29,15 @@ const pageTitle = title ? `${title} | ${settings.data?.title ?? "Carver & Associ
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-    {description && <meta name="description" content={description} />}
+    <title>{pageCtx.title}</title>
+    {pageCtx.description && <meta name="description" content={pageCtx.description} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet" />
-    <EmDashHead />
+    <EmDashHead page={pageCtx} />
   </head>
   <body>
-    <EmDashBodyStart />
+    <EmDashBodyStart page={pageCtx} />
 
     <header class="site-header">
       <div class="header-inner">
@@ -38,10 +47,10 @@ const pageTitle = title ? `${title} | ${settings.data?.title ?? "Carver & Associ
 
         <nav class="site-nav" aria-label="Primary navigation">
           <ul>
-            {navItems.map((item) => (
+            {navItems.map((item) => item && (
               <li>
-                <a href={item.data.url} class={Astro.url.pathname === item.data.url ? "active" : ""}>
-                  {item.data.label}
+                <a href={item.url} class={Astro.url.pathname === item.url ? "active" : ""}>
+                  {item.label}
                 </a>
               </li>
             ))}
@@ -67,7 +76,7 @@ const pageTitle = title ? `${title} | ${settings.data?.title ?? "Carver & Associ
       </div>
     </footer>
 
-    <EmDashBodyEnd />
+    <EmDashBodyEnd page={pageCtx} />
   </body>
 </html>
 
