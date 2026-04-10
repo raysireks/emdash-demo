@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Contact - Free Consultation | Carver & Associates" description="Contact Carver & Associates for a free criminal defense consultation in Springfield, MO. Call (417) 350-1172 or use the form below.">
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>Contact Us</h1>
+      <p class="subtitle">Free Consultation Available 24/7</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-details">
+          <h2>Office Info</h2>
+          <p><strong>Phone:</strong> <a href="tel:4173501172">(417) 350-1172</a></p>
+          <p><strong>Address:</strong> 123 Law Plaza, Springfield, MO 65806</p>
+          <p>[Hello World - Contact Details Stub]</p>
+        </div>
+        <div class="contact-form-placeholder">
+          <h2>Send us a Message</h2>
+          <div class="form-stub">
+            <p>Form will go here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .text-center { text-align: center; }
+  
+  .page-header {
+    background: #f8f9fa;
+    padding: 4rem 0;
+    border-bottom: 2px solid #BECA5C;
+  }
+  
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-family: var(--font-heading);
+    letter-spacing: 0.2em;
+    color: #BECA5C;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .content-section { padding: 4rem 0; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .form-stub {
+    padding: 3rem;
+    background: #f1f1f1;
+    border: 1px dashed #ccc;
+    text-align: center;
+    color: #999;
+  }
+</style>

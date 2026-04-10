@@ -10,21 +10,8 @@ export interface Page {
   slug: string | null;
   status: string;
   title: string;
+  meta_description?: string;
   content?: PortableTextBlock[];
-  createdAt: Date;
-  updatedAt: Date;
-  publishedAt: Date | null;
-  bylines?: ContentBylineCredit[];
-}
-
-export interface Post {
-  id: string;
-  slug: string | null;
-  status: string;
-  title: string;
-  featured_image?: { id: string; src?: string; alt?: string; width?: number; height?: number };
-  content?: PortableTextBlock[];
-  excerpt?: string;
   createdAt: Date;
   updatedAt: Date;
   publishedAt: Date | null;
@@ -34,6 +21,5 @@ export interface Post {
 declare module "emdash" {
   interface EmDashCollections {
     pages: Page;
-    posts: Post;
   }
 }

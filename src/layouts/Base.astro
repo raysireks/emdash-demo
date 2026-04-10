@@ -1,0 +1,214 @@
+---
+import { getMenu, getSiteSettings } from "emdash";
+import { EmDashHead, EmDashBodyStart, EmDashBodyEnd } from "emdash/ui";
+
+const settings = await getSiteSettings();
+const menu = await getMenu("primary");
+const navItems = menu?.entries ?? [];
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${settings.data?.title ?? "Carver & Associates"}` : (settings.data?.title ?? "Carver & Associates");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet" />
+    <EmDashHead />
+  </head>
+  <body>
+    <EmDashBodyStart />
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-text">CARVER <span class="logo-amp">&</span> ASSOCIATES</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul>
+            {navItems.map((item) => (
+              <li>
+                <a href={item.data.url} class={Astro.url.pathname === item.data.url ? "active" : ""}>
+                  {item.data.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div class="header-cta">
+          <a href="tel:4173501172" class="header-phone">(417) 350-1172</a>
+          <a href="/contact" class="btn btn-accent">FREE CONSULTATION</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-logo-text">CARVER <span>&</span> ASSOCIATES</p>
+        <p class="footer-disclaimer">Use of the website does not constitute legal advice or form an attorney/client relationship.</p>
+        <p class="footer-copy">&copy; {new Date().getFullYear()} Carver & Associates. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <EmDashBodyEnd />
+  </body>
+</html>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --color-primary: #023750;
+    --color-accent:  #BECA5C;
+    --color-body:    #666666;
+    --color-heading: #333333;
+    --color-footer:  #1C1C1C;
+    --font-heading:  "Josefin Sans", sans-serif;
+    --font-body:     "Ubuntu", sans-serif;
+    --max-width:     1200px;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-body);
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main { flex: 1; }
+
+  /* ── Header ──────────────────────────────────── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(2, 55, 80, 0.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 72px;
+  }
+
+  .logo { text-decoration: none; flex-shrink: 0; }
+  .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.1em;
+  }
+  .logo-amp { color: var(--color-accent); }
+
+  .site-nav { flex: 1; }
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .site-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+  .header-phone {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .header-phone:hover { color: #fff; }
+
+  /* ── Buttons ──────────────────────────────────── */
+  .btn {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-accent {
+    background: var(--color-accent);
+    color: var(--color-heading);
+  }
+  .btn-accent:hover { background: #a8b540; }
+
+  /* ── Footer ──────────────────────────────────── */
+  .site-footer {
+    background: var(--color-footer);
+    color: rgba(255,255,255,0.6);
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+  }
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-logo-text {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.12em;
+  }
+  .footer-logo-text span { color: var(--color-accent); }
+  .footer-disclaimer { font-size: 0.75rem; }
+  .footer-copy { font-size: 0.75rem; }
+</style>

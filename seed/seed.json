@@ -1,0 +1,68 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Carver & Associates",
+    "description": "Award-winning criminal defense attorneys in Springfield, MO",
+    "author": "Carver & Associates"
+  },
+  "settings": {
+    "title": "Carver & Associates",
+    "tagline": "Award-Winning Criminal Defense Attorneys – Springfield, MO"
+  },
+  "collections": [
+    {
+      "slug": "pages",
+      "label": "Pages",
+      "labelSingular": "Page",
+      "supports": ["drafts", "revisions", "seo"],
+      "fields": [
+        { "slug": "title", "label": "Title", "type": "string", "required": true, "searchable": true },
+        { "slug": "meta_description", "label": "Meta Description", "type": "text" },
+        { "slug": "content", "label": "Content", "type": "portableText", "searchable": true }
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary Navigation",
+      "items": [
+        { "type": "custom", "label": "Home", "url": "/" },
+        { "type": "custom", "label": "About", "url": "/about" },
+        { "type": "custom", "label": "Practice Areas", "url": "/practice-areas" },
+        { "type": "custom", "label": "Blog", "url": "/blog" },
+        { "type": "custom", "label": "Contact", "url": "/contact" }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Footer Navigation",
+      "items": [
+        { "type": "custom", "label": "Home", "url": "/" },
+        { "type": "custom", "label": "About", "url": "/about" },
+        { "type": "custom", "label": "Contact", "url": "/contact" }
+      ]
+    }
+  ],
+  "content": {
+    "pages": [
+      {
+        "id": "home",
+        "slug": "home",
+        "status": "published",
+        "data": {
+          "title": "Carver & Associates – Criminal Defense",
+          "meta_description": "Award-winning criminal defense attorneys in Springfield, MO. 40+ years of experience. Free consultation.",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [{ "_type": "span", "text": "Welcome to Carver & Associates." }]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
